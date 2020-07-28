@@ -1,13 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
-import Tester from './Tester.js';
+import Login from './components/Login.js';
 
 function App() {
   return (
     <div className="App">
-      <Tester />
+      <Login />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import axiosAuthorized from '../axiosAuthorized';
 
-class Tester extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+class Login extends Component {
     componentDidMount() {
-        axios.get('http://localhost:3005/test')
+        axiosAuthorized.post('http://localhost:3005/login', {email:"jas@aol.com", password: "hello"})
             .then(response => {
                 console.log(response.data);
             })
@@ -15,11 +11,10 @@ class Tester extends Component {
                 console.log(error);
             });
     }
-
   
     render() {
-        return <h1>Working</h1>
+        return null
     }
 }
 
-export default Tester;
+export default Login;
