@@ -5,7 +5,7 @@ class Login extends Component {
     componentDidMount() {
         axiosAuthorized.post('http://localhost:3005/login', {email:"jas@aol.com", password: "hello"})
             .then(response => {
-                console.log(response.data);
+                localStorage.setItem("authorizationToken", response.data.jwt);
             })
             .catch(error => {
                 console.log(error);
