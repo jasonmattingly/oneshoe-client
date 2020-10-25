@@ -1,0 +1,15 @@
+.Header {
+    display: grid;
+    background-color: #CDCDCD;
+    grid-template-columns: 3fr 1fr;
+}
+
+.Nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.LogIn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
