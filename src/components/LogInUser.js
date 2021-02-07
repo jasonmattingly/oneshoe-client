@@ -1,7 +1,7 @@
-import { axiosAuthorized } from '../axiosAuthorized';
+import axios from 'axios';
 //jas@aol.com hello
-function logInUser({ emailAddress, password}) {
-    axiosAuthorized.post('http://localhost:3005/login', {email: emailAddress, password: password})
+function logInUser({ emailAddress, password }) {
+    axios.post('http://localhost:3005/login', {email: emailAddress, password: password})
         .then(response => {
             console.log(response);
         })

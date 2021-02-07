@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-
-import { axiosAuthorized } from '../axiosAuthorized';
+import axios from 'axios';
 
 class DoSomethingLoggedIn extends Component {
 
     visitSecretStuff = () => {
-        axiosAuthorized.get('http://localhost:3005/secret_stuff',{withCredentials: true})
+        axios.get('http://localhost:3005/secret_stuff', {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
             .then(response => {
                 console.log(response.data);
             })
